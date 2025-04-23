@@ -6,3 +6,4 @@ faiss-cpu
 pdfminer.six
 requests
 langchain-community
+pypdf
