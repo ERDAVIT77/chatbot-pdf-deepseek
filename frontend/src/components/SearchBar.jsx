@@ -11,16 +11,16 @@ function SearchBar() {
     setResponse("");
 
     try {
-      const res = await fetch(`https://chatbot-backend-2cur.onrender.com/query`, {
+      const res = await fetch("https://chatbot-backend-2cur.onrender.com/query", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ query })
+        body: JSON.stringify({ query }),
       });
 
       const data = await res.json();
-      setResponse(data.answer || "No se obtuvo respuesta.");
+      setResponse(data.response || "Sin respuesta.");
     } catch (error) {
       setResponse("Error al conectar con el servidor.");
     } finally {
