@@ -1,3 +1,4 @@
+sentence-transformers
 fastapi
 uvicorn
 langchain
@@ -5,3 +6,6 @@ openai
 faiss-cpu
 pdfminer.six
 requests
+langchain-community
+pypdf
+sentence-transformers
