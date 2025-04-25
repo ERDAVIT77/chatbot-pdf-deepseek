@@ -11,9 +11,16 @@ function SearchBar() {
     setResponse("");
 
     try {
-      const res = await fetch(`http://localhost:8000/ask?q=${encodeURIComponent(query)}`);
+      const res = await fetch(`https://chatbot-backend-2cur.onrender.com/query`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ query })
+      });
+
       const data = await res.json();
-      setResponse(data.answer);
+      setResponse(data.answer || "No se obtuvo respuesta.");
     } catch (error) {
       setResponse("Error al conectar con el servidor.");
     } finally {
