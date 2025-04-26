@@ -1,0 +1,16 @@
+{
+  "name": "chatbot-pdf-deepseek-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite dev",
+    "preview": "vite preview"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "vite": "^6.3.3"
+  }
+}
